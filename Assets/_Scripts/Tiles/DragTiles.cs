@@ -68,5 +68,6 @@ public class DragTiles : MonoBehaviour {
     if (!IsPositionInBounds(targetTilePosition)) return;
     levelTilemap.SetTile(targetTilePosition, draggedTile);
     levelTilemap.SetTile(draggedTilePosition, targetTile);
+    EventManager.TilesSwitched();
   }
 }
