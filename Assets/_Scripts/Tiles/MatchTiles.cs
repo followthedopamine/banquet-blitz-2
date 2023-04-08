@@ -56,8 +56,10 @@ public class MatchTiles : MonoBehaviour {
       }
       if (match.tilePositions.Count >= MINIMUM_MATCH_SIZE) matches.Add(match);
     }
-    PrintMatches(matches);
-    EventManager.MatchesFound(matches);
+    if (matches.Count > 0) {
+      PrintMatches(matches);
+      EventManager.MatchesFound(matches);
+    }
   }
 
   private Match InitializeMatch(Vector3Int position) {
