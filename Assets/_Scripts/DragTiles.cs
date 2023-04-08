@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class DragTiles : MonoBehaviour {
 
   private void Start() {
-    EventManager.TilemapClicked += PrintClickedTile;
+    EventManager.TilemapMouseDown += PrintClickedTile;
   }
 
   private void PrintClickedTile() {

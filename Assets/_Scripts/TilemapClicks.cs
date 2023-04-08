@@ -5,6 +5,10 @@ using UnityEngine;
 public class TilemapClicks : MonoBehaviour {
 
   private void OnMouseDown() {
-    EventManager.TilemapClicked();
+    EventManager.TilemapMouseDown();
+  }
+
+  private void OnMouseUp() {
+    EventManager.TilemapMouseUp();
   }
 }
