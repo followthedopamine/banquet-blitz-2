@@ -5,11 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class LevelManager : MonoBehaviour {
   public Tilemap levelTilemap;
-  public Tilemap backgroundTilemap;
+  public Tilemap containerTilemap;
 
   private void Start() {
     levelTilemap = GameObject.Find("Level Tilemap").GetComponent<Tilemap>();
-    backgroundTilemap = GameObject.Find("Container Tilemap").GetComponent<Tilemap>();
+    containerTilemap = GameObject.Find("Container Tilemap").GetComponent<Tilemap>();
     EventManager.LevelLoaded(this);
   }
 }

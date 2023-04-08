@@ -55,11 +55,17 @@ public class DragTiles : MonoBehaviour {
     }
   }
 
+  private Boolean IsPositionInBounds(Vector3Int position) {
+    Tilemap containerTilemap = GameManager.Instance.levelManager.containerTilemap;
+    return containerTilemap.GetTile(position) != null;
+  }
+
   private void SwitchTiles() {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Vector3Int targetTilePosition = GetNearestTileInDraggedDirection();
     GameTile targetTile = levelTilemap.GetTile<GameTile>(targetTilePosition);
     if (targetTilePosition == draggedTilePosition) return;
+    if (!IsPositionInBounds(targetTilePosition)) return;
     levelTilemap.SetTile(targetTilePosition, draggedTile);
     levelTilemap.SetTile(draggedTilePosition, targetTile);
   }
