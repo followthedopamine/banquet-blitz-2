@@ -9,9 +9,14 @@ public class DragTiles : MonoBehaviour {
     EventManager.TilemapClicked += PrintClickedTile;
   }
 
-  private void PrintClickedTile(Vector3 mousePosition) {
+  private void PrintClickedTile() {
+    Debug.Log(GetTilePositionUnderMouse());
+  }
+
+  private Vector3 GetTilePositionUnderMouse() {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
-    Debug.Log(levelTilemap.WorldToCell(mousePosition));
+    Vector3 mousePositionInWorld = GameManager.Instance.cam.ScreenToWorldPoint(Input.mousePosition);
+    return levelTilemap.WorldToCell(mousePositionInWorld);
   }
 
 
