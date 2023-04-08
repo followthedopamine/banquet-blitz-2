@@ -8,5 +8,6 @@ public class EventManager : MonoBehaviour {
   public static Action<LevelManager> LevelLoaded;
   public static Action TilemapMouseDown;
   public static Action TilemapMouseUp;
-  public static Func<List<Match>> TilesSwitched;
+  public static Action TilesSwitched;
+  public static Action<List<Match>> MatchesFound;
 }

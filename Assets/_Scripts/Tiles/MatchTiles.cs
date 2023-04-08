@@ -16,7 +16,7 @@ public class MatchTiles : MonoBehaviour {
     EventManager.TilesSwitched += GetAllMatches;
   }
 
-  public List<Match> GetAllMatches() {
+  public void GetAllMatches() {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Stack<Vector3Int> tilesRemaining = new();
     List<Vector3Int> visitedTiles = new();
@@ -57,7 +57,7 @@ public class MatchTiles : MonoBehaviour {
       if (match.tilePositions.Count >= MINIMUM_MATCH_SIZE) matches.Add(match);
     }
     PrintMatches(matches);
-    return matches;
+    EventManager.MatchesFound(matches);
   }
 
   private Match InitializeMatch(Vector3Int position) {
