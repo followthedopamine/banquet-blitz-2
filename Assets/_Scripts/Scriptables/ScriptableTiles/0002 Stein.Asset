@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2de3868702b9b840bf8b1207a1d3e28, type: 3}
-  m_Name: 0000 Apple
+  m_Name: 0002 Stein
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 8a1f96aeada36a146a4140183e10c88a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6ad15fa8d0bd2b4c9414f2faea3db7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -34,6 +34,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 2
-  id: 0
+  id: 1
   type: 0
   position: {x: 0, y: 0, z: 0}
