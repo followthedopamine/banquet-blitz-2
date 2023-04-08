@@ -12,7 +12,6 @@ public class GameTile : Tile {
   }
   public int id;
   public Type type;
-  public Vector3 position;
 
 #if UNITY_EDITOR
   // The following is a helper that adds a menu item to create a RoadTile Asset
