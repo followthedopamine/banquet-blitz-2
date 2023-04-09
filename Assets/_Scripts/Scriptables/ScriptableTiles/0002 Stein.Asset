@@ -34,6 +34,5 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 2
-  id: 1
+  id: 2
   type: 0
-  position: {x: 0, y: 0, z: 0}

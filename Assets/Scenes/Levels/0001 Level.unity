@@ -546,7 +546,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelTilemap: {fileID: 0}
-  backgroundTilemap: {fileID: 0}
+  containerTilemap: {fileID: 0}
+  spawnableTiles:
+  - {fileID: 11400000, guid: 881f3d266c5e42c418f9d3a7eb4e88f3, type: 2}
+  - {fileID: 11400000, guid: acf80027d5833974791223c341e7749f, type: 2}
 --- !u!1 &1487081570
 GameObject:
   m_ObjectHideFlags: 0

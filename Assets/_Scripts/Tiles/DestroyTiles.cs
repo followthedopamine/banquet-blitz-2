@@ -14,10 +14,15 @@ public class DestroyTiles : MonoBehaviour {
   }
 
   private void DestroyMatches(List<Match> matches) {
+    List<Vector3Int> destroyedTiles = new();
     foreach (Match match in matches) {
       foreach (Vector3Int tilePosition in match.tilePositions) {
         DestroyTileAtPosition(tilePosition);
+        destroyedTiles.Add(tilePosition);
       }
+    }
+    if (destroyedTiles.Count > 0) {
+      EventManager.DestroyedTiles(destroyedTiles);
     }
   }
 }
