@@ -10,4 +10,5 @@ public class EventManager : MonoBehaviour {
   public static Action TilesSwitched;
   public static Action<List<Match>> MatchesFound;
   public static Action<List<Vector3Int>> DestroyedTiles;
+  public static Action<List<Vector3Int>> SpawnedTiles;
 }

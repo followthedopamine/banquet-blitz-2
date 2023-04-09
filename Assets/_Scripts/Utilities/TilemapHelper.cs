@@ -44,8 +44,6 @@ public class TilemapHelper : MonoBehaviour {
     return newTile;
   }
 
-
-
   public static List<Vector3Int> GetTilePositions(Tilemap tilemap) {
     List<Vector3Int> tiles = new();
     foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin) {

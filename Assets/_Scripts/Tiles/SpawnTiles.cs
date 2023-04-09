@@ -31,6 +31,8 @@ public class SpawnTiles : MonoBehaviour {
         levelTilemap.SetTile(positionToSpawnTile, newTile);
       }
     }
+
+    EventManager.SpawnedTiles();
   }
 
   private int GetTopRowOfColumn(int column) {
