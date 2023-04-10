@@ -32,7 +32,7 @@ public class SpawnTiles : MonoBehaviour {
       }
     }
 
-    EventManager.SpawnedTiles();
+    EventManager.SpawnedTiles(destroyedTiles);
   }
 
   private int GetTopRowOfColumn(int column) {
