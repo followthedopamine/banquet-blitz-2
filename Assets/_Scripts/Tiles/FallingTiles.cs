@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class FallingTiles : MonoBehaviour {
 
+  private const float FALL_SPEED = 5.5f;
+
   private void Start() {
     EventManager.SpawnedTiles += FindTilesThatNeedToFall;
   }
@@ -47,6 +49,35 @@ public class FallingTiles : MonoBehaviour {
   }
 
   private void MakeTilesFall(List<Pair<Vector3Int, Vector3Int>> tilesThatNeedToFall) {
+    foreach (Pair<Vector3Int, Vector3Int> tilePair in tilesThatNeedToFall) {
+      Vector3Int emptyTile = tilePair.First;
+      Vector3Int fallingTile = tilePair.Second;
+      StartCoroutine(DropTile(fallingTile, emptyTile));
+    }
+  }
 
+  private IEnumerator DropTile(Vector3Int fallingTile, Vector3Int emptyTile) {
+    Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
+    // Vector3 fallingTileWorldPosition = levelTilemap.GetCellCenterWorld(fallingTile);
+    Vector3 emptyTileWorldPosition = levelTilemap.GetCellCenterWorld(emptyTile);
+    GameTile tile = levelTilemap.GetTile<GameTile>(fallingTile);
+    GameObject fallingTileObject = TilemapHelper.ReplaceTileWithGameObject(levelTilemap, fallingTile, true);
+    //new GameObject();
+    // // Match game grid scale
+    // Transform gameGrid = levelObject.transform.parent;
+    // newTile.transform.localScale = gameGrid.localScale;//gameGrid.localScale;
+    // SpriteRenderer spriteRenderer = newTile.AddComponent<SpriteRenderer>();
+    // spriteRenderer.sprite = tile.sprite;
+    // levelTilemap.SetTile(current, null);
+    // newTile.transform.position = position;
+    while (fallingTileObject.transform.position != emptyTileWorldPosition) {
+      fallingTileObject.transform.position = Vector3.MoveTowards(fallingTileObject.transform.position, emptyTileWorldPosition, FALL_SPEED * Time.deltaTime);
+      yield return new WaitForEndOfFrame();
+    }
+    // Destroy(fallingTileObject);
+
+    // levelTilemap.SetTile(emptyTile, tile);
+    // falling--;
+    // yield return new WaitForSeconds(0.3f); // TODO: Change to tile falling time
   }
 }

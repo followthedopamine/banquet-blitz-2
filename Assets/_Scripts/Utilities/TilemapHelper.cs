@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TilemapHelper : MonoBehaviour {
-  public static GameObject ReplaceTileWithGameObject(Tilemap tilemap, Vector3Int tilePosition) {
+  public static GameObject ReplaceTileWithGameObject(Tilemap tilemap, Vector3Int tilePosition, bool useMask = false) {
     Vector3 worldPosition = tilemap.GetCellCenterWorld(tilePosition);
     Tile tile = tilemap.GetTile<Tile>(tilePosition);
     GameObject newTile = new();
@@ -13,6 +13,9 @@ public class TilemapHelper : MonoBehaviour {
     newTile.transform.localScale = grid.localScale;
     SpriteRenderer spriteRenderer = newTile.AddComponent<SpriteRenderer>();
     spriteRenderer.sprite = tile.sprite;
+    if (useMask) {
+      spriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+    }
     tilemap.SetTile(tilePosition, null);
     newTile.transform.position = worldPosition;
     return newTile;
