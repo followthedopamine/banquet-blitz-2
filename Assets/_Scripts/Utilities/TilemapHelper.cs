@@ -5,8 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class TilemapHelper : MonoBehaviour {
   public static GameObject ReplaceTileWithGameObject(Tilemap tilemap, Vector3Int tilePosition, bool useMask = false) {
+    Debug.Log("Replacing tile at " + tilePosition + " in " + tilemap.name);
     Vector3 worldPosition = tilemap.GetCellCenterWorld(tilePosition);
     Tile tile = tilemap.GetTile<Tile>(tilePosition);
+    if (tile == null) {
+      Debug.LogError("Tile is null at " + tilePosition + " in " + tilemap.name);
+    }
     GameObject newTile = new();
     // Match game grid scale
     Transform grid = tilemap.transform.parent;
