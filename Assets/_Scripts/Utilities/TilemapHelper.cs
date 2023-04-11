@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class TilemapHelper : MonoBehaviour {
   public static GameObject ReplaceTileWithGameObject(Tilemap tilemap, Vector3Int tilePosition, bool useMask = false) {
-    Debug.Log("Replacing tile at " + tilePosition + " in " + tilemap.name);
     Vector3 worldPosition = tilemap.GetCellCenterWorld(tilePosition);
     Tile tile = tilemap.GetTile<Tile>(tilePosition);
     if (tile == null) {
