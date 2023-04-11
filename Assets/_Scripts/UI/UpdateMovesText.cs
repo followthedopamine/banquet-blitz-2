@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class UpdateMovesText : MonoBehaviour {
+  private TMP_Text movesText;
+
+  private void Start() {
+    movesText = GameObject.Find("Moves").GetComponent<TMP_Text>();
+    EventManager.MovesUpdated += MatchMovesTextToLevelMoves;
+    EventManager.LevelLoaded += MatchMovesOnLevelLoad;
+  }
+
+  private void MatchMovesOnLevelLoad(LevelManager levelManager) {
+    movesText.text = levelManager.movesRemaining.ToString();
+  }
+
+  private void MatchMovesTextToLevelMoves() {
+    movesText.text = GameManager.Instance.levelManager.movesRemaining.ToString();
+  }
+}

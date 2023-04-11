@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class LevelManager : MonoBehaviour {
-  public Tilemap levelTilemap;
-  public Tilemap containerTilemap;
+  [HideInInspector] public Tilemap levelTilemap;
+  [HideInInspector] public Tilemap containerTilemap;
+  [HideInInspector] public List<Vector3Int> containerTilePositions;
+
   public List<GameTile> spawnableTiles;
-  public List<Vector3Int> containerTilePositions;
+  public int movesRemaining;
 
 
   private void Start() {
