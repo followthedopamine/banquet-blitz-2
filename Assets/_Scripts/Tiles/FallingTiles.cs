@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class FallingTiles : MonoBehaviour {
 
   private const float FALL_SPEED = 5.5f;
+  private int tilesFalling = 0;
 
   private void Start() {
     EventManager.SpawnedTiles += FindTilesThatNeedToFall;
@@ -67,6 +68,7 @@ public class FallingTiles : MonoBehaviour {
       Vector3Int emptyTile = tilePair.First;
       Vector3Int fallingTile = tilePair.Second;
       StartCoroutine(DropTile(fallingTile, emptyTile));
+      tilesFalling++;
     }
     // List<Vector3Int> emptyTiles = GetAllEmptyTiles();
     // FindTilesThatNeedToFall(emptyTiles);
@@ -77,7 +79,7 @@ public class FallingTiles : MonoBehaviour {
     // Vector3 fallingTileWorldPosition = levelTilemap.GetCellCenterWorld(fallingTile);
     Vector3 emptyTileWorldPosition = levelTilemap.GetCellCenterWorld(emptyTile);
     GameTile tile = levelTilemap.GetTile<GameTile>(fallingTile);
-    GameObject fallingTileObject = TilemapHelper.ReplaceTileWithGameObject(levelTilemap, fallingTile, true);
+    GameObject fallingTileObject = TilemapHelper.ReplaceTileWithGameObject(levelTilemap, fallingTile, false);
     while (fallingTileObject.transform.position != emptyTileWorldPosition) {
       fallingTileObject.transform.position = Vector3.MoveTowards(fallingTileObject.transform.position, emptyTileWorldPosition, FALL_SPEED * Time.deltaTime);
       yield return new WaitForEndOfFrame();
@@ -85,6 +87,10 @@ public class FallingTiles : MonoBehaviour {
     Destroy(fallingTileObject);
 
     levelTilemap.SetTile(emptyTile, tile);
+    tilesFalling--;
+    if (tilesFalling == 0) {
+      EventManager.TilesFinishedFalling();
+    }
     // falling--;
     // yield return new WaitForSeconds(0.3f); // TODO: Change to tile falling time
   }

@@ -14,6 +14,7 @@ public class MatchTiles : MonoBehaviour {
 
   private void Start() {
     EventManager.TilesSwitched += GetAllMatches;
+    EventManager.TilesFinishedFalling += GetAllMatches;
   }
 
   public void GetAllMatches() {

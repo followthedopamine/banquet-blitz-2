@@ -22,11 +22,11 @@ public class SpawnTiles : MonoBehaviour {
     }
 
     foreach (KeyValuePair<int, int> keyValuePair in map) {
-      GameTile newTile = GetRandomSpawnableTile();
       int column = keyValuePair.Key;
       int count = keyValuePair.Value;
       int firstRowSpawn = GetTopRowOfColumn(column) + 1;
       for (int i = 0; i < count; i++) {
+        GameTile newTile = GetRandomSpawnableTile();
         Vector3Int positionToSpawnTile = new(column, firstRowSpawn + i, 0);
         levelTilemap.SetTile(positionToSpawnTile, newTile);
       }
