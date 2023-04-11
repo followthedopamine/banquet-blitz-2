@@ -19,6 +19,8 @@ public class FallingTiles : MonoBehaviour {
     List<Vector3Int> containerTilePositions = GameManager.Instance.levelManager.containerTilePositions;
     List<Vector3Int> remainingTiles = TilemapHelper.GetTilePositions(levelTilemap);
     List<Pair<Vector3Int, Vector3Int>> tilesThatNeedToFall = new();
+    emptyTiles = SortTilePositionsByYValue(emptyTiles);
+
     while (emptyTiles.Count > 0) {
       // Vector3Int emptyTile in emptyTiles
       Vector3Int emptyTile = emptyTiles[0];
@@ -34,6 +36,7 @@ public class FallingTiles : MonoBehaviour {
       emptyTiles.RemoveAt(0);
       if (containerTilePositions.Contains(replacementTile.First)) {
         emptyTiles.Add(replacementTile.First);
+        emptyTiles = SortTilePositionsByYValue(emptyTiles); // TODO: Optimize by inserting into correct position instead of inserting then sorting
       }
       remainingTiles.RemoveAt(replacementTile.Second);
     }
@@ -43,6 +46,11 @@ public class FallingTiles : MonoBehaviour {
     }
     Debug.Log(log);
     MakeTilesFall(tilesThatNeedToFall);
+  }
+
+  private List<Vector3Int> SortTilePositionsByYValue(List<Vector3Int> tilePositions) {
+    tilePositions.Sort((a, b) => a.y.CompareTo(b.y));
+    return tilePositions;
   }
 
   // Should also return index of list for easy removal from list
@@ -58,18 +66,22 @@ public class FallingTiles : MonoBehaviour {
       }
     }
 
-    Pair<Vector3Int, int> result = new(new Vector3Int(1000, 1000, 1000), closestPositiveYIndex);
-    if (closestPositiveYIndex != -1) result.First = tileList[closestPositiveYIndex];
+    Pair<Vector3Int, int> result = new(tileList[closestPositiveYIndex], closestPositiveYIndex);
     return result;
   }
 
   private void MakeTilesFall(List<Pair<Vector3Int, Vector3Int>> tilesThatNeedToFall) {
+    List<IEnumerator> fallingTilesCoroutines = new();
     foreach (Pair<Vector3Int, Vector3Int> tilePair in tilesThatNeedToFall) {
       Vector3Int emptyTile = tilePair.First;
       Vector3Int fallingTile = tilePair.Second;
+      fallingTilesCoroutines.Add(DropTile(fallingTile, emptyTile));
       StartCoroutine(DropTile(fallingTile, emptyTile));
       tilesFalling++;
     }
+    // foreach (IEnumerator coroutine in fallingTilesCoroutines) {
+    //   StartCoroutine(coroutine);
+    // }
     // List<Vector3Int> emptyTiles = GetAllEmptyTiles();
     // FindTilesThatNeedToFall(emptyTiles);
   }
