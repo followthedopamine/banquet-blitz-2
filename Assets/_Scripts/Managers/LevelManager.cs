@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour {
   public int movesRemaining = -1;
   public float timeRemaining = -1;
   public Goals.Type goalType;
-  public List<GameTile> goalTile;
+  public List<GameTile> goalTiles;
   public List<int> goalRemaining;
   public List<GameTile> spawnableTiles;
 
