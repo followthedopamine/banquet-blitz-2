@@ -4,10 +4,6 @@ using UnityEngine;
 using System.Linq;
 
 public class Goals : MonoBehaviour {
-  public enum Type {
-    Score,
-    Count
-  }
 
   private void Start() {
     EventManager.MatchesFound += TrackGoalCompletion;
