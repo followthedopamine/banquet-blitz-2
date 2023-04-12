@@ -14,4 +14,5 @@ public class EventManager : MonoBehaviour {
   public static Action TilesFinishedFalling;
   public static Action MovesUpdated;
   public static Action ScoreUpdated;
+  public static Action<float> OneSecondTick;
 }

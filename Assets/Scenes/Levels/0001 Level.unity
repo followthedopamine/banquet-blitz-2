@@ -548,10 +548,15 @@ MonoBehaviour:
   levelTilemap: {fileID: 0}
   containerTilemap: {fileID: 0}
   containerTilePositions: []
+  score: 0
+  movesRemaining: 10
+  timeRemaining: 20
+  goalType: 0
+  goalTile: []
+  goalRemaining: 
   spawnableTiles:
   - {fileID: 11400000, guid: 881f3d266c5e42c418f9d3a7eb4e88f3, type: 2}
   - {fileID: 11400000, guid: acf80027d5833974791223c341e7749f, type: 2}
-  movesRemaining: 10
 --- !u!1 &1487081570
 GameObject:
   m_ObjectHideFlags: 0

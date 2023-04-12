@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour {
   [HideInInspector] public int score;
 
   public int movesRemaining = -1;
-  public int timeRemaining = -1;
+  public float timeRemaining = -1;
   public Goals.Type goalType;
   public List<GameTile> goalTile;
   public List<int> goalRemaining;
