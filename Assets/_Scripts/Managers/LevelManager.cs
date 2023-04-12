@@ -9,9 +9,12 @@ public class LevelManager : MonoBehaviour {
   [HideInInspector] public List<Vector3Int> containerTilePositions;
   [HideInInspector] public int score;
 
+  public int movesRemaining = -1;
+  public int timeRemaining = -1;
+  public Goals.Type goalType;
+  public List<GameTile> goalTile;
+  public List<int> goalRemaining;
   public List<GameTile> spawnableTiles;
-  public int movesRemaining;
-
 
   private void Start() {
     levelTilemap = GameObject.Find("Level Tilemap").GetComponent<Tilemap>();
