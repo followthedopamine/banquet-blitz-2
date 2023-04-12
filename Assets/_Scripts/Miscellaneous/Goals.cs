@@ -17,6 +17,7 @@ public class Goals : MonoBehaviour {
       if (levelManager.goalTiles.Count == 0) return; // Only track score if there are no goal tiles
     }
     TrackCountCompletion(matches);
+    EventManager.GoalUpdated(levelManager);
   }
 
   private void TrackScoreCompletion(List<Match> matches) {
