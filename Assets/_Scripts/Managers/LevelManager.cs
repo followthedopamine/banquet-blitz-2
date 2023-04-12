@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour {
   [HideInInspector] public Tilemap levelTilemap;
   [HideInInspector] public Tilemap containerTilemap;
   [HideInInspector] public List<Vector3Int> containerTilePositions;
+  [HideInInspector] public int score;
 
   public List<GameTile> spawnableTiles;
   public int movesRemaining;

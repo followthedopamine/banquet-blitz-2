@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandleMoves : MonoBehaviour {
+public class Moves : MonoBehaviour {
   private void Start() {
     EventManager.TilesSwitched += SubtractMove;
   }

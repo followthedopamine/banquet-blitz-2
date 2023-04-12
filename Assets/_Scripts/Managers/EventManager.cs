@@ -13,4 +13,5 @@ public class EventManager : MonoBehaviour {
   public static Action<List<Vector3Int>> SpawnedTiles;
   public static Action TilesFinishedFalling;
   public static Action MovesUpdated;
+  public static Action ScoreUpdated;
 }
