@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DisplayGoal : MonoBehaviour {
   private List<GameObject> goalObjects = new();
@@ -21,21 +22,23 @@ public class DisplayGoal : MonoBehaviour {
       goalObjects.Add(goalObjectCopy);
     }
     UpdateGoal(levelManager);
+    DisplayGoalIcons(levelManager);
   }
 
   private void UpdateGoal(LevelManager levelManager) {
     for (int i = 0; i < levelManager.goalRemaining.Count; i++) {
       int goal = levelManager.goalRemaining[i];
+      // TODO: Could probably store goal text and goal icon objects so I don't have to use find as an optimization
       TMP_Text goalText = goalObjects[i].transform.Find("Goal Text").GetComponent<TMP_Text>();
       goalText.text = goal.ToString();
     }
   }
 
-  private void DisplayGoalText() {
-
-  }
-
-  private void DisplayGoalIcons() {
-
+  private void DisplayGoalIcons(LevelManager levelManager) {
+    for (int i = 0; i < levelManager.goalRemaining.Count; i++) {
+      Sprite goalSprite = levelManager.goalTiles[i].sprite;
+      Image goalIcon = goalObjects[i].transform.Find("Goal Icon").GetComponent<Image>();
+      goalIcon.sprite = goalSprite;
+    }
   }
 }
