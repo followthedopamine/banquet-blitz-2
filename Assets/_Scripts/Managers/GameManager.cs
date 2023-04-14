@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager> {
   [HideInInspector] public Camera cam;
   [HideInInspector] public LevelManager levelManager;
   public const int MAX_LIVES = 5;
-  [HideInInspector] public int lives = MAX_LIVES;
+  public int lives = 5;
 
   private void Start() {
     cam = Camera.main;

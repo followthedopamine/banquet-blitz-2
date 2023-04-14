@@ -18,4 +18,5 @@ public class EventManager : MonoBehaviour {
   public static Action<LevelManager> GoalUpdated;
   public static Action LevelWon;
   public static Action LevelLost;
+  public static Action LivesUpdated;
 }
