@@ -10,5 +10,8 @@ public class Moves : MonoBehaviour {
   private void SubtractMove() {
     GameManager.Instance.levelManager.movesRemaining--;
     EventManager.MovesUpdated();
+    if (GameManager.Instance.levelManager.movesRemaining == 0) {
+      EventManager.LevelLost();
+    }
   }
 }

@@ -16,4 +16,6 @@ public class EventManager : MonoBehaviour {
   public static Action ScoreUpdated;
   public static Action<float> OneSecondTick;
   public static Action<LevelManager> GoalUpdated;
+  public static Action LevelWon;
+  public static Action LevelLost;
 }

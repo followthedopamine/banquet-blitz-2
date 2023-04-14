@@ -35,7 +35,7 @@ public class DisplayGoal : MonoBehaviour {
   }
 
   private void DisplayGoalIcons(LevelManager levelManager) {
-    for (int i = 0; i < levelManager.goalRemaining.Count; i++) {
+    for (int i = 0; i < levelManager.goalTiles.Count; i++) {
       Sprite goalSprite = levelManager.goalTiles[i].sprite;
       Image goalIcon = goalObjects[i].transform.Find("Goal Icon").GetComponent<Image>();
       goalIcon.sprite = goalSprite;
