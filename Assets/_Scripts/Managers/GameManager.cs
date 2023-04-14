@@ -6,13 +6,15 @@ public class GameManager : Singleton<GameManager> {
 
   [HideInInspector] public Camera cam;
   [HideInInspector] public LevelManager levelManager;
+  public const int MAX_LIVES = 5;
+  [HideInInspector] public int lives = MAX_LIVES;
 
   private void Start() {
     cam = Camera.main;
-    EventManager.LevelLoaded += GetCurrentLevelManager;
+    EventManager.LevelLoaded += SetCurrentLevelManager;
   }
 
-  private void GetCurrentLevelManager(LevelManager level) {
+  private void SetCurrentLevelManager(LevelManager level) {
     levelManager = level;
   }
 }
