@@ -20,6 +20,8 @@ public class SceneController : MonoBehaviour {
   private void LoadLevelSelect() {
     UnloadAllLevelScenes();
     UnloadPlayScenes();
+    SceneManager.LoadScene(LEVEL_SELECT_SCENE, LoadSceneMode.Additive);
+    SceneManager.LoadScene(GAME_SCENE, LoadSceneMode.Additive);
   }
 
   private void LoadPlayScenes() {
