@@ -12,6 +12,6 @@ public class LevelSelectButtons : MonoBehaviour {
   }
 
   public void World1Level1Button() {
-    Debug.Log("Test");
+    EventManager.LevelButtonClicked(0);
   }
 }
