@@ -1,0 +1,23 @@
+.kanbn-task-data-due {
+  display: block; /* this will display task relations, one per line */
+}
+
+.kanbn-task-data-created {
+  display: none; /* this will display task relations, one per line */
+}
+
+.kanbn-task-data-workload {
+  display: none;
+}
+
+.kanbn-task-tag-art {
+  background-color: #eb8f34;
+}
+
+.kanbn-task-tag-code {
+  background-color: #34a2eb;
+}
+
+.kanbn-task-tag-sound {
+  background-color: #b454e8;
+}

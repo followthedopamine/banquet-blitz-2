@@ -1,6 +1,6 @@
 ---
-created: 2023-05-08T19:45:20.139Z
-updated: 2023-05-08T19:45:20.133Z
+created: 2023-05-08T19:47:26.384Z
+updated: 2023-05-08T20:30:29.251Z
 assigned: ""
 progress: 0
 tags:
@@ -9,4 +9,6 @@ due: 2023-05-10T00:00:00.000Z
 started: 2023-05-10T00:00:00.000Z
 ---
 
-# Win screen
+# Lose screen art
+
+Test
