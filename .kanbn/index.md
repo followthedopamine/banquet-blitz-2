@@ -23,10 +23,11 @@ sprints:
 
 ## Todo
 
-- [lose-screen-art](tasks/lose-screen-art.md)
 - [tutorial-art](tasks/tutorial-art.md)
 - [win-screen-art](tasks/win-screen-art.md)
 
 ## In Progress
 
 ## Done
+
+- [lose-screen-art](tasks/lose-screen-art.md)
