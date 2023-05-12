@@ -23,12 +23,13 @@ sprints:
 
 ## Todo
 
-- [tutorial-art](tasks/tutorial-art.md)
-- [slice-win-and-lose-screen-art](tasks/slice-win-and-lose-screen-art.md)
+- [fit-ui-elements-responsively](tasks/fit-ui-elements-responsively.md)
 
 ## In Progress
 
 ## Done
 
 - [lose-screen-art](tasks/lose-screen-art.md)
+- [tutorial-art](tasks/tutorial-art.md)
+- [slice-win-and-lose-screen-art](tasks/slice-win-and-lose-screen-art.md)
 - [win-screen-art](tasks/win-screen-art.md)
