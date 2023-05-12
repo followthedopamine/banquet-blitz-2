@@ -14,7 +14,7 @@ public class SceneController : MonoBehaviour {
   private void Start() {
     // TODO: For now just load the level select as there is no main menu yet
     // LoadLevelByIndex(0);
-    LoadLevelSelect();
+    // LoadLevelSelect();
   }
 
   private void LoadLevelSelect() {
