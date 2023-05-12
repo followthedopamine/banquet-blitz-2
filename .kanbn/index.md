@@ -27,11 +27,10 @@ sprints:
 
 ## In Progress
 
-- [bug-two-level-selects-can-be-loaded-at-once](tasks/bug-two-level-selects-can-be-loaded-at-once.md)
-
 ## Done
 
 - [lose-screen-art](tasks/lose-screen-art.md)
+- [bug-two-level-selects-can-be-loaded-at-once](tasks/bug-two-level-selects-can-be-loaded-at-once.md)
 - [tutorial-art](tasks/tutorial-art.md)
 - [slice-win-and-lose-screen-art](tasks/slice-win-and-lose-screen-art.md)
 - [win-screen-art](tasks/win-screen-art.md)
