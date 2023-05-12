@@ -7,7 +7,7 @@ public class UpdateMovesText : MonoBehaviour {
   private TMP_Text movesText;
 
   private void Start() {
-    movesText = GameObject.Find("Moves").GetComponent<TMP_Text>();
+    movesText = GameObject.Find("Moves Text").GetComponent<TMP_Text>();
     EventManager.MovesUpdated += MatchMovesTextToLevelMoves;
     EventManager.LevelLoaded += MatchMovesOnLevelLoad;
   }
