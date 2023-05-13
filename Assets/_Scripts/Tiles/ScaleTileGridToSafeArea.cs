@@ -29,7 +29,7 @@ public class ScaleTileGridToSafeArea : MonoBehaviour {
     Vector2 tilemapDimensions = GetTrueDimensionsOfTilemap();
     float scalingFactor = GetScalingFactor(safeArea, tilemapDimensions);
     Debug.Log(scalingFactor);
-    levelTilemap.layoutGrid.gameObject.transform.localScale = new Vector3(scalingFactor, scalingFactor, gameObject.transform.localScale.z);
+    levelTilemap.layoutGrid.gameObject.transform.localScale = new Vector3(scalingFactor, scalingFactor, levelTilemap.layoutGrid.transform.localScale.z);
   }
 
   private Vector2 CalculateSafeArea() {
