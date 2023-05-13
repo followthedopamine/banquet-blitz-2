@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class DisplayLives : MonoBehaviour {
   public GameObject livesContainer;
   public List<Image> livesImages;
+  [SerializeField] private Sprite filledSprite;
+  [SerializeField] private Sprite emptySprite;
+
 
   private void Start() {
     CreateLivesObjects();
@@ -27,10 +30,10 @@ public class DisplayLives : MonoBehaviour {
       Image life = livesImages[i];
       if (i >= GameManager.Instance.lives) {
         // Spent lives
-        life.color = new Color(0, 0, 0, 1);
+        life.sprite = emptySprite;
       } else {
         // Remaining lives
-        life.color = new Color(1, 1, 1, 1);
+        life.sprite = filledSprite;
       }
     }
   }

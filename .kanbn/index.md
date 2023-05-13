@@ -21,18 +21,19 @@ sprints:
 - [title-screen-art](tasks/title-screen-art.md)
 - [trophies-bar](tasks/trophies-bar.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
+- [ads-for-lives](tasks/ads-for-lives.md)
 
 ## Todo
 
 - [responsive-background](tasks/responsive-background.md)
-- [empty-lives-sprite-display](tasks/empty-lives-sprite-display.md)
-- [move-scaling-level-tilemap-script-to-tilemap-manager](tasks/move-scaling-level-tilemap-script-to-tilemap-manager.md)
 
 ## In Progress
 
 ## Done
 
 - [lose-screen-art](tasks/lose-screen-art.md)
+- [empty-lives-sprite-display](tasks/empty-lives-sprite-display.md)
+- [move-scaling-level-tilemap-script-to-tilemap-manager](tasks/move-scaling-level-tilemap-script-to-tilemap-manager.md)
 - [fit-ui-elements-responsively](tasks/fit-ui-elements-responsively.md)
 - [bug-two-level-selects-can-be-loaded-at-once](tasks/bug-two-level-selects-can-be-loaded-at-once.md)
 - [tutorial-art](tasks/tutorial-art.md)
