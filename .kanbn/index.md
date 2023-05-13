@@ -25,9 +25,13 @@ sprints:
 
 ## Todo
 
-- [responsive-background](tasks/responsive-background.md)
+- [bug-fix-moves-counter-not-setting-on-level-load](tasks/bug-fix-moves-counter-not-setting-on-level-load.md)
+- [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
+- [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
 
 ## In Progress
+
+- [responsive-background](tasks/responsive-background.md)
 
 ## Done
 
