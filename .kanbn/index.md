@@ -22,6 +22,8 @@ sprints:
 - [trophies-bar](tasks/trophies-bar.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [ads-for-lives](tasks/ads-for-lives.md)
+- [create-new-layout-for-ipad-landscape-desktop](tasks/create-new-layout-for-ipad-landscape-desktop.md)
+- [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 
 ## Todo
 
@@ -31,11 +33,10 @@ sprints:
 
 ## In Progress
 
-- [responsive-background](tasks/responsive-background.md)
-
 ## Done
 
 - [lose-screen-art](tasks/lose-screen-art.md)
+- [responsive-background](tasks/responsive-background.md)
 - [empty-lives-sprite-display](tasks/empty-lives-sprite-display.md)
 - [move-scaling-level-tilemap-script-to-tilemap-manager](tasks/move-scaling-level-tilemap-script-to-tilemap-manager.md)
 - [fit-ui-elements-responsively](tasks/fit-ui-elements-responsively.md)
