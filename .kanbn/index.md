@@ -14,22 +14,26 @@ sprints:
 ## Backlog
 
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
-- [responsive-layout](tasks/responsive-layout.md)
 - [power-ups](tasks/power-ups.md)
 - [obstacles](tasks/obstacles.md)
 - [music](tasks/music.md)
 - [sound-effects](tasks/sound-effects.md)
 - [title-screen-art](tasks/title-screen-art.md)
+- [trophies-bar](tasks/trophies-bar.md)
+- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 
 ## Todo
 
-- [fit-ui-elements-responsively](tasks/fit-ui-elements-responsively.md)
+- [responsive-background](tasks/responsive-background.md)
+- [empty-lives-sprite-display](tasks/empty-lives-sprite-display.md)
+- [move-scaling-level-tilemap-script-to-tilemap-manager](tasks/move-scaling-level-tilemap-script-to-tilemap-manager.md)
 
 ## In Progress
 
 ## Done
 
 - [lose-screen-art](tasks/lose-screen-art.md)
+- [fit-ui-elements-responsively](tasks/fit-ui-elements-responsively.md)
 - [bug-two-level-selects-can-be-loaded-at-once](tasks/bug-two-level-selects-can-be-loaded-at-once.md)
 - [tutorial-art](tasks/tutorial-art.md)
 - [slice-win-and-lose-screen-art](tasks/slice-win-and-lose-screen-art.md)
