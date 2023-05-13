@@ -25,3 +25,11 @@
 .kanbn-task-tag-bug {
   background-color: #ff3654;
 }
+
+.kanbn-task-tag-refactor {
+  background-color: #4ba34f;
+}
+
+.kanbn-column-done .kanbn-task-data-due {
+  display: none;
+}
