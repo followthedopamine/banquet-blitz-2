@@ -9,7 +9,7 @@ public class UpdateMovesText : MonoBehaviour {
   private void Start() {
     movesText = GameObject.Find("Moves Text").GetComponent<TMP_Text>();
     EventManager.MovesUpdated += MatchMovesTextToLevelMoves;
-    EventManager.LevelLoaded += MatchMovesOnLevelLoad;
+    EventManager.LevelLoaded += MatchMovesOnLevelLoad; // UI must be loaded first for this to fire
   }
 
   private void MatchMovesOnLevelLoad(LevelManager levelManager) {

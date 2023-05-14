@@ -20,5 +20,6 @@ public class LevelManager : MonoBehaviour {
     containerTilemap = GameObject.Find("Container Tilemap").GetComponent<Tilemap>();
     containerTilePositions = TilemapHelper.GetTilePositions(containerTilemap);
     EventManager.LevelLoaded(this);
+    Debug.Log("Level loaded");
   }
 }

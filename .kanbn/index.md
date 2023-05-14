@@ -27,7 +27,6 @@ sprints:
 
 ## Todo
 
-- [bug-fix-moves-counter-not-setting-on-level-load](tasks/bug-fix-moves-counter-not-setting-on-level-load.md)
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
 - [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
 
@@ -35,6 +34,7 @@ sprints:
 
 ## Done
 
+- [bug-fix-moves-counter-not-setting-on-level-load](tasks/bug-fix-moves-counter-not-setting-on-level-load.md)
 - [lose-screen-art](tasks/lose-screen-art.md)
 - [responsive-background](tasks/responsive-background.md)
 - [empty-lives-sprite-display](tasks/empty-lives-sprite-display.md)
