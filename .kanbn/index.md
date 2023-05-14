@@ -24,16 +24,18 @@ sprints:
 - [ads-for-lives](tasks/ads-for-lives.md)
 - [create-new-layout-for-ipad-landscape-desktop](tasks/create-new-layout-for-ipad-landscape-desktop.md)
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
+- [work-out-layout-for-more-than-two-goals](tasks/work-out-layout-for-more-than-two-goals.md)
+- [score-goal-icon](tasks/score-goal-icon.md)
 
 ## Todo
 
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
-- [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
 
 ## In Progress
 
 ## Done
 
+- [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
 - [bug-fix-moves-counter-not-setting-on-level-load](tasks/bug-fix-moves-counter-not-setting-on-level-load.md)
 - [lose-screen-art](tasks/lose-screen-art.md)
 - [responsive-background](tasks/responsive-background.md)

@@ -19,6 +19,7 @@ public class DisplayGoal : MonoBehaviour {
     for (int i = 1; i < levelManager.goalRemaining.Count; i++) {
       GameObject goalObjectCopy = Instantiate(initialGoalObject);
       goalObjectCopy.transform.SetParent(goalContainer.transform);
+      goalObjectCopy.transform.localScale = new Vector3(1, 1, 1); // Changing the parent makes the local scale smaller
       goalObjects.Add(goalObjectCopy);
     }
     UpdateGoal(levelManager);

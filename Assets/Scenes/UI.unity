@@ -1023,7 +1023,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 19.30743, y: 15.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &644975670
 CanvasRenderer:
@@ -1279,8 +1279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 14.4, y: -25.1}
-  m_SizeDelta: {x: 20, y: 20}
+  m_AnchoredPosition: {x: 3.91823, y: -7.2}
+  m_SizeDelta: {x: 14.55293, y: 14.553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904876573
 MonoBehaviour:
@@ -1746,8 +1746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000047683716, y: -5.7}
-  m_SizeDelta: {x: 40, y: 16.3}
+  m_AnchoredPosition: {x: -0, y: -6.1}
+  m_SizeDelta: {x: 38.8, y: 16.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536358546
 MonoBehaviour:
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536358544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -1767,12 +1767,14 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 60, y: 50}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1556844919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 28.5, y: -26}
+  m_AnchoredPosition: {x: 16.14, y: -9.4618}
   m_SizeDelta: {x: 16.736053, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010080099
@@ -2079,7 +2081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: WW
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8b88588f7ce847149b3bb41596bb86a2, type: 2}
   m_sharedMaterial: {fileID: -3999612190466172165, guid: 8b88588f7ce847149b3bb41596bb86a2, type: 2}
@@ -2106,8 +2108,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
