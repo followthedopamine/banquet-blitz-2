@@ -21,6 +21,6 @@ public class PositionTrophyBarSprites : MonoBehaviour {
       float xPosition = trophyBarWidth / goldTrophyScore * trophyScore;
       trophySprite.transform.localPosition = new Vector3(xPosition, trophySprite.transform.localPosition.y, trophySprite.transform.localPosition.z);
     }
-    emptyTrophy.SetActive(false);
+    Destroy(emptyTrophy);
   }
 }
