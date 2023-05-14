@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 250200857}
   - component: {fileID: 250200858}
   - component: {fileID: 250200859}
+  - component: {fileID: 250200860}
   m_Layer: 0
   m_Name: Tilemap Manager
   m_TagString: Untagged
@@ -171,7 +172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &250200854
 MonoBehaviour:
@@ -243,6 +244,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 602989e4e757502488be95b96511a87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &250200860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250200851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae83295d3cc052499e088e8985e116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -426,7 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14bf27980ef357479cad5a6f938de7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageToScale: {fileID: 21300000, guid: 8f2b6f528ddc9d249aba3791df339baa, type: 3}
 --- !u!1 &947890257
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +450,6 @@ GameObject:
   - component: {fileID: 947890258}
   - component: {fileID: 947890259}
   - component: {fileID: 947890260}
-  - component: {fileID: 947890261}
   - component: {fileID: 947890262}
   - component: {fileID: 947890263}
   - component: {fileID: 947890264}
@@ -462,7 +473,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &947890259
 MonoBehaviour:
@@ -489,18 +500,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aeda19f246c94a84e8f68d3394f6be31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &947890261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947890257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae83295d3cc052499e088e8985e116e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &947890262

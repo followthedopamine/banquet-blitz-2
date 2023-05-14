@@ -22,6 +22,7 @@ public class DestroyTiles : MonoBehaviour {
       }
     }
     if (destroyedTiles.Count > 0) {
+      Debug.Log(destroyedTiles.Count);
       EventManager.DestroyedTiles(destroyedTiles);
     }
   }

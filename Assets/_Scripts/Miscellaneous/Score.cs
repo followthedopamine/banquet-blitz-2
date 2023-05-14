@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Score : MonoBehaviour {
-  public const int SCORE_MULTIPLIER = 100;
+  public const int SCORE_MULTIPLIER = 10;
 
   private void Start() {
     EventManager.DestroyedTiles += IncreaseScoreForDestroyedTiles;
   }
 
-  private void IncreaseScoreForDestroyedTiles(List<Vector3Int> DestroyedTiles) {
-    GameManager.Instance.levelManager.score += DestroyedTiles.Count * SCORE_MULTIPLIER;
+  private void IncreaseScoreForDestroyedTiles(List<Vector3Int> destroyedTiles) {
+    Debug.Log("Score increased " + destroyedTiles.Count);
+    GameManager.Instance.levelManager.score += destroyedTiles.Count * SCORE_MULTIPLIER;
     EventManager.ScoreUpdated();
   }
 }
