@@ -13,23 +13,23 @@ sprints:
 
 ## Backlog
 
-- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [power-ups](tasks/power-ups.md)
 - [obstacles](tasks/obstacles.md)
 - [music](tasks/music.md)
 - [sound-effects](tasks/sound-effects.md)
 - [title-screen-art](tasks/title-screen-art.md)
-- [trophies-bar](tasks/trophies-bar.md)
-- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [ads-for-lives](tasks/ads-for-lives.md)
 - [create-new-layout-for-ipad-landscape-desktop](tasks/create-new-layout-for-ipad-landscape-desktop.md)
-- [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [work-out-layout-for-more-than-two-goals](tasks/work-out-layout-for-more-than-two-goals.md)
 - [score-goal-icon](tasks/score-goal-icon.md)
 
 ## Todo
 
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
+- [trophies-bar](tasks/trophies-bar.md)
+- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
+- [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
+- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 
 ## In Progress
 
