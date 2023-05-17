@@ -29,7 +29,6 @@ sprints:
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
-- [trophy-level-up-fireworks](tasks/trophy-level-up-fireworks.md)
 
 ## In Progress
 
@@ -37,6 +36,7 @@ sprints:
 
 ## Done
 
+- [trophy-level-up-fireworks](tasks/trophy-level-up-fireworks.md)
 - [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
 - [trophies-bar](tasks/trophies-bar.md)
 - [bug-fix-moves-counter-not-setting-on-level-load](tasks/bug-fix-moves-counter-not-setting-on-level-load.md)
