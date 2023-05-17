@@ -36,7 +36,9 @@ public class TrophyLevelUp : MonoBehaviour {
   }
 
   private void PlayFireworksAnimation() {
-
+    Transform trophyBarImage = trophyBar.transform.GetChild(currentTrophyIndex);
+    GameObject trophyBarImageParticles = trophyBarImage.GetChild(0).GetChild(0).gameObject;
+    trophyBarImageParticles.SetActive(true);
   }
 
   private void ChangeSprite() {
