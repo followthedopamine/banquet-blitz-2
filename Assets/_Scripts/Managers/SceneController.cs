@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour {
+public class SceneController : Singleton<SceneController> {
   private const string GAME_SCENE = "Game";
   private const string UI_SCENE = "UI";
   private const string CORE_SCENE = "Core";
@@ -15,7 +15,6 @@ public class SceneController : MonoBehaviour {
     // TODO: For now just load the level select as there is no main menu yet
     // LoadLevelByIndex(0);
     // LoadLevelSelect();
-    EventManager.RetryButton += ReloadCurrentLevel;
     SceneManager.sceneLoaded += OnSceneLoad;
     SceneManager.sceneUnloaded += OnSceneUnload;
   }
@@ -75,12 +74,14 @@ public class SceneController : MonoBehaviour {
     return loadedScenes;
   }
 
-  private void ReloadCurrentLevel() {
+  public void ReloadCurrentLevel() {
     int currentLevelIndex = GetCurrentLevelIndex();
     LoadLevelByIndex(currentLevelIndex);
-    // UnloadPlayScenes();
-    // UnloadAllLevelScenes();
-    // LoadPlayScenes();
+  }
+
+  public void LoadNextLevel() {
+    int currentLevelIndex = GetCurrentLevelIndex();
+    LoadLevelByIndex(currentLevelIndex + 1);
   }
 
   private int GetCurrentLevelIndex() {

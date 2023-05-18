@@ -16,13 +16,11 @@ public class UIButtons : MonoBehaviour {
   }
 
   public void RetryButton() {
-    DisableAllUI();
-    gameUI.SetActive(true);
-    EventManager.RetryButton();
+    SceneController.Instance.ReloadCurrentLevel();
   }
 
   public void NextLevelButton() {
-    // TODO
+    SceneController.Instance.LoadNextLevel();
   }
 
   private void DisableAllUI() {

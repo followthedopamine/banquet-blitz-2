@@ -22,5 +22,4 @@ public class EventManager : MonoBehaviour {
   public static Action<int> LevelButtonClicked;
   public static Action GameLoopStarted;
   public static Action GameLoopFinished;
-  public static Action RetryButton;
 }

@@ -33,6 +33,7 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
+- [bug-tiles-can-be-switched-after-level-ends](tasks/bug-tiles-can-be-switched-after-level-ends.md)
 
 ## In Progress
 
