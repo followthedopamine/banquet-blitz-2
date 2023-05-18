@@ -20,4 +20,7 @@ public class EventManager : MonoBehaviour {
   public static Action LevelLost;
   public static Action LivesUpdated;
   public static Action<int> LevelButtonClicked;
+  public static Action GameLoopStarted;
+  public static Action GameLoopFinished;
+
 }
