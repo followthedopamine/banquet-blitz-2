@@ -12,9 +12,13 @@ public class TrophyLevelUp : MonoBehaviour {
   private GameObject trophyBar;
   [SerializeField] private Sprite[] trophySprites;
 
-  private void Start() {
+  private void OnEnable() {
     trophyBar = GameObject.Find("Trophy Bar");
     EventManager.ScoreUpdated += CheckForLevelUp;
+  }
+
+  private void OnDisable() {
+    EventManager.ScoreUpdated -= CheckForLevelUp;
   }
 
   private void CheckForLevelUp() {

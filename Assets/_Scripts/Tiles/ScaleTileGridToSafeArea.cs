@@ -17,13 +17,17 @@ public class ScaleTileGridToSafeArea : MonoBehaviour {
   // Calculate true size of combined tiles in tilemap
   // Scale tilemap to fill the safe area as best as possible
 
-  private void Start() {
-    topBar = GameObject.Find("Top Bar");
-    bottomBar = GameObject.Find("Lives Container");
+  private void OnEnable() {
     EventManager.LevelLoaded += ScaleGrid;
   }
 
+  private void OnDisable() {
+    EventManager.LevelLoaded -= ScaleGrid;
+  }
+
   private void ScaleGrid(LevelManager levelManager) {
+    topBar = GameObject.Find("Top Bar");
+    bottomBar = GameObject.Find("Lives Container");
     levelTilemap = levelManager.levelTilemap;
     Vector2 safeArea = CalculateSafeArea();
     Vector2 tilemapDimensions = GetTrueDimensionsOfTilemap();

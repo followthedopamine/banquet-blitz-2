@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Moves : MonoBehaviour {
-  private void Start() {
+  private void OnEnable() {
     EventManager.TilesSwitched += SubtractMove;
+  }
+
+  private void OnDisable() {
+    EventManager.TilesSwitched -= SubtractMove;
   }
 
   private void SubtractMove() {

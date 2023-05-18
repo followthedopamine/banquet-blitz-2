@@ -5,8 +5,12 @@ using System.Linq;
 
 public class Goals : MonoBehaviour {
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.MatchesFound += TrackGoalCompletion;
+  }
+
+  private void OnDisable() {
+    EventManager.MatchesFound -= TrackGoalCompletion;
   }
 
   private void TrackGoalCompletion(List<Match> matches) {

@@ -7,13 +7,14 @@ public class EndScreens : MonoBehaviour {
   [SerializeField] private GameObject loseScreen;
 
 
-  private void Start() {
-    EventManager.LevelLoaded += AddListeners;
-  }
-
-  private void AddListeners(LevelManager levelManager) {
+  private void OnEnable() {
     EventManager.LevelWon += DisplayWinScreen;
     EventManager.LevelLost += DisplayLoseScreen;
+  }
+
+  private void OnDisable() {
+    EventManager.LevelWon -= DisplayWinScreen;
+    EventManager.LevelLost -= DisplayLoseScreen;
   }
 
   private void DisplayWinScreen() {

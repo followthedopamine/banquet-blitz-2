@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class PositionTrophyBarSprites : MonoBehaviour {
   private const float HORIZONTAL_PADDING = 1.2f;
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.LevelLoaded += PositionSprites;
+  }
+
+  private void OnDisable() {
+    EventManager.LevelLoaded -= PositionSprites;
   }
 
   private void PositionSprites(LevelManager levelManager) {

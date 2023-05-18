@@ -13,7 +13,7 @@ public class ResponsiveScaling : MonoBehaviour {
   private float trueImageHeight;
   private float trueImageWidth;
 
-  private void Start() {
+  private void OnEnable() {
     Image image = gameObject.GetComponent<Image>();
     trueImageHeight = image.sprite.rect.height;
     trueImageWidth = image.sprite.rect.width;

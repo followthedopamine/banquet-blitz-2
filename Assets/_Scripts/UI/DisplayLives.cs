@@ -10,9 +10,13 @@ public class DisplayLives : MonoBehaviour {
   [SerializeField] private Sprite emptySprite;
 
 
-  private void Start() {
+  private void OnEnable() {
     CreateLivesObjects();
     EventManager.LivesUpdated += ColourLives;
+  }
+
+  private void OnDisable() {
+    EventManager.LivesUpdated -= ColourLives;
   }
 
   private void CreateLivesObjects() {

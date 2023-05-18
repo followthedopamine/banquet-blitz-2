@@ -7,9 +7,14 @@ using UnityEngine.UI;
 public class DisplayGoal : MonoBehaviour {
   private List<GameObject> goalObjects = new();
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.GoalUpdated += UpdateGoal;
     EventManager.LevelLoaded += CreateGoalObjects;
+  }
+
+  private void OnDisable() {
+    EventManager.GoalUpdated -= UpdateGoal;
+    EventManager.LevelLoaded -= CreateGoalObjects;
   }
 
   private void CreateGoalObjects(LevelManager levelManager) {

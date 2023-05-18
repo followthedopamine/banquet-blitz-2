@@ -9,8 +9,12 @@ public class Timer : MonoBehaviour {
   private bool shouldTimerRun = false;
   private float lastEvent;
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.LevelLoaded += StartTimer;
+  }
+
+  private void OnDisable() {
+    EventManager.LevelLoaded -= StartTimer;
   }
 
   private void Update() {
@@ -26,7 +30,11 @@ public class Timer : MonoBehaviour {
       levelManager.timeRemaining = 0;
       shouldTimerRun = false;
       // TODO: Goal failed
-      levelManager.levelIsLost = true;
+      if (levelManager.gameLoopRunning) {
+        levelManager.levelIsLost = true;
+      } else {
+        EventManager.LevelLost();
+      }
     }
   }
 

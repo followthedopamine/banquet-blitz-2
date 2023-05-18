@@ -7,9 +7,13 @@ public class UpdateTrophiesBarSlider : MonoBehaviour {
 
   private Slider slider;
 
-  private void Start() {
+  private void OnEnable() {
     slider = GameObject.Find("Trophy Bar Slider").GetComponent<Slider>();
     EventManager.ScoreUpdated += UpdateSlider;
+  }
+
+  private void OnDisable() {
+    EventManager.ScoreUpdated -= UpdateSlider;
   }
 
   private void UpdateSlider() {

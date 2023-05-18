@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HandleGameLoop : MonoBehaviour {
-  private void Start() {
-    EventManager.LevelLoaded += AddListeners;
-  }
-
-  private void AddListeners(LevelManager levelManager) {
+  private void OnEnable() {
     EventManager.GameLoopStarted += GameLoopIsRunning;
     EventManager.GameLoopFinished += GameLoopIsNotRunning;
     EventManager.GameLoopFinished += CheckIfGameIsWonOrLost;
+  }
+
+  private void OnDisable() {
+    EventManager.GameLoopStarted -= GameLoopIsRunning;
+    EventManager.GameLoopFinished -= GameLoopIsNotRunning;
+    EventManager.GameLoopFinished -= CheckIfGameIsWonOrLost;
   }
 
   private void GameLoopIsRunning() {

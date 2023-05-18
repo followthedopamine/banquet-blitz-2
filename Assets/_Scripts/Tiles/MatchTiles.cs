@@ -12,9 +12,14 @@ public struct Match {
 public class MatchTiles : MonoBehaviour {
   private const int MINIMUM_MATCH_SIZE = 4;
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.TilesSwitched += GetAllMatches;
     EventManager.TilesFinishedFalling += GetAllMatches;
+  }
+
+  private void OnDisable() {
+    EventManager.TilesSwitched -= GetAllMatches;
+    EventManager.TilesFinishedFalling -= GetAllMatches;
   }
 
   public void GetAllMatches() {

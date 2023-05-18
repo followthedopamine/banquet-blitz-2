@@ -23,12 +23,15 @@ sprints:
 - [work-out-layout-for-more-than-two-goals](tasks/work-out-layout-for-more-than-two-goals.md)
 - [score-goal-icon](tasks/score-goal-icon.md)
 - [spawn-powerups-for-moves-time-remaining-on-level-completed](tasks/spawn-powerups-for-moves-time-remaining-on-level-completed.md)
+- [in-game-menu-art](tasks/in-game-menu-art.md)
+- [options-art](tasks/options-art.md)
 
 ## Todo
 
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
+- [main-menu-buttons](tasks/main-menu-buttons.md)
 
 ## In Progress
 

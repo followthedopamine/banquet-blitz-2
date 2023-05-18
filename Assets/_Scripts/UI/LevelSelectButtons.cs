@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelSelectButtons : MonoBehaviour {
   public GameObject world1;
 
-  private void Start() {
+  private void OnEnable() {
     for (int i = 0; i < world1.transform.childCount; i++) {
       world1.transform.GetChild(i);
     }

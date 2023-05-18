@@ -8,8 +8,12 @@ public class FallingTiles : MonoBehaviour {
   private const float FALL_SPEED = 5.5f;
   private int tilesFalling = 0;
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.SpawnedTiles += FindTilesThatNeedToFall;
+  }
+
+  private void OnDisable() {
+    EventManager.SpawnedTiles -= FindTilesThatNeedToFall;
   }
 
   private void FindTilesThatNeedToFall(List<Vector3Int> emptyTiles) {

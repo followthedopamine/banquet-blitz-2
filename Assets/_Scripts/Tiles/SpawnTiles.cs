@@ -5,8 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class SpawnTiles : MonoBehaviour {
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.DestroyedTiles += SpawnMissingTiles;
+  }
+
+  private void OnDisable() {
+    EventManager.DestroyedTiles -= SpawnMissingTiles;
   }
 
   private void SpawnMissingTiles(List<Vector3Int> destroyedTiles) {

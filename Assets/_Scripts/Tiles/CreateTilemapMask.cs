@@ -5,8 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class CreateTilemapMask : MonoBehaviour {
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.LevelLoaded += CreateMask;
+  }
+
+  private void OnDisable() {
+    EventManager.LevelLoaded -= CreateMask;
   }
 
   private void CreateMask(LevelManager levelManager) {

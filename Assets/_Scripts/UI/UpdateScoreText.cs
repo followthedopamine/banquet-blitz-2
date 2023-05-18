@@ -5,9 +5,13 @@ using TMPro;
 
 public class UpdateScoreText : MonoBehaviour {
   private TMP_Text scoreText;
-  private void Start() {
+  private void OnEnable() {
     scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
     EventManager.ScoreUpdated += MatchScoreTextToScore;
+  }
+
+  private void OnDisable() {
+    EventManager.ScoreUpdated -= MatchScoreTextToScore;
   }
 
   private void MatchScoreTextToScore() {

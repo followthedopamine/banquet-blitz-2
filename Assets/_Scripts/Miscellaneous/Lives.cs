@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Lives : MonoBehaviour {
-  private void Start() {
+  private void OnEnable() {
     EventManager.LevelLost += SubtractLife;
     InvokeRepeating("AddLife", 120, 120);
+  }
+
+  private void OnDisable() {
+    EventManager.LevelLost -= SubtractLife;
   }
 
   private void SubtractLife() {

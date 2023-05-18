@@ -7,10 +7,15 @@ public class UpdateTimerText : MonoBehaviour {
 
   private TMP_Text timerText;
 
-  private void Start() {
+  private void OnEnable() {
     timerText = GameObject.Find("Timer Text").GetComponent<TMP_Text>();
     EventManager.OneSecondTick += UpdateTime;
     EventManager.LevelLoaded += SetInitialTime;
+  }
+
+  private void OnDisable() {
+    EventManager.OneSecondTick -= UpdateTime;
+    EventManager.LevelLoaded -= SetInitialTime;
   }
 
   private void UpdateTime(float timeToDisplay) {

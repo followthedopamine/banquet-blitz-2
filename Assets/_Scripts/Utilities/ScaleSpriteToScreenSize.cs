@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScaleSpriteToScreenSize : MonoBehaviour {
 
-  private void Start() {
+  private void OnEnable() {
     float scalingFactor = GetScalingFactor();
     gameObject.transform.localScale = new Vector3(scalingFactor, scalingFactor, gameObject.transform.localScale.z);
   }

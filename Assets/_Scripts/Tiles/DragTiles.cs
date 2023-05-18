@@ -9,10 +9,16 @@ public class DragTiles : MonoBehaviour {
   private GameTile draggedTile;
   private Vector3Int draggedTilePosition;
 
-  private void Start() {
+  private void OnEnable() {
     EventManager.TilemapMouseDown += PrintClickedTile;
     EventManager.TilemapMouseDown += UpdateDraggedTile;
     EventManager.TilemapMouseUp += SwitchTiles;
+  }
+
+  private void OnDisable() {
+    EventManager.TilemapMouseDown -= PrintClickedTile;
+    EventManager.TilemapMouseDown -= UpdateDraggedTile;
+    EventManager.TilemapMouseUp -= SwitchTiles;
   }
 
   private void PrintClickedTile() {

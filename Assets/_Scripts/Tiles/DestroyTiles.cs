@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class DestroyTiles : MonoBehaviour {
-  private void Start() {
+  private void OnEnable() {
     EventManager.MatchesFound += DestroyMatches;
+  }
+
+  private void OnDisable() {
+    EventManager.MatchesFound -= DestroyMatches;
   }
 
   private void DestroyTileAtPosition(Vector3Int tilePosition) {

@@ -21,14 +21,11 @@ public class LevelManager : MonoBehaviour {
   public bool gameLoopRunning = false;
 
 
-  private void Start() {
+  private void OnEnable() {
     levelTilemap = GameObject.Find("Level Tilemap").GetComponent<Tilemap>();
     containerTilemap = GameObject.Find("Container Tilemap").GetComponent<Tilemap>();
     containerTilePositions = TilemapHelper.GetTilePositions(containerTilemap);
     EventManager.LevelLoaded(this);
     Debug.Log("Level loaded");
-
   }
-
-
 }
