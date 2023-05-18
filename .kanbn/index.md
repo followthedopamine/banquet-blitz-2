@@ -25,6 +25,7 @@ sprints:
 - [spawn-powerups-for-moves-time-remaining-on-level-completed](tasks/spawn-powerups-for-moves-time-remaining-on-level-completed.md)
 - [in-game-menu-art](tasks/in-game-menu-art.md)
 - [options-art](tasks/options-art.md)
+- [hide-next-level-button-if-there-is-no-next-level](tasks/hide-next-level-button-if-there-is-no-next-level.md)
 
 ## Todo
 
