@@ -32,6 +32,8 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
+- [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
+- [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
 
 ## In Progress
 
