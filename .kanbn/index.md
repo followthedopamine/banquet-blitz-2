@@ -32,15 +32,15 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
-- [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 
 ## In Progress
 
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
-- [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
+- [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 
 ## Done
 
+- [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
 - [bug-remove-ability-to-switch-tiles-during-game-loop](tasks/bug-remove-ability-to-switch-tiles-during-game-loop.md)
 - [trophy-level-up-fireworks](tasks/trophy-level-up-fireworks.md)
 - [bug-fix-multiple-goals-not-displaying](tasks/bug-fix-multiple-goals-not-displaying.md)
