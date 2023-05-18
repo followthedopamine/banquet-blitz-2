@@ -37,8 +37,8 @@ sprints:
 
 ## In Progress
 
-- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
+- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 
 ## Done
 
