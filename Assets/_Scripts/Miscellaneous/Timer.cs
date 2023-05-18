@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour {
 
-  //TODO: Might wanna move timer into this script, not sure if there's much overhead fetching from singleton every frame
-
   private bool shouldTimerRun = false;
   private float lastEvent;
 
   private void OnEnable() {
     EventManager.LevelLoaded += StartTimer;
+    EventManager.LevelWon += PauseTimer;
+    EventManager.LevelLost += PauseTimer;
+    // TODO: Add pausing/resuming timer when menu is accessed/closed
   }
 
   private void OnDisable() {
     EventManager.LevelLoaded -= StartTimer;
+    EventManager.LevelWon -= PauseTimer;
+    EventManager.LevelLost -= PauseTimer;
   }
 
   private void Update() {
@@ -29,7 +32,6 @@ public class Timer : MonoBehaviour {
     } else {
       levelManager.timeRemaining = 0;
       shouldTimerRun = false;
-      // TODO: Goal failed
       if (levelManager.gameLoopRunning) {
         levelManager.levelIsLost = true;
       } else {
@@ -44,5 +46,11 @@ public class Timer : MonoBehaviour {
     shouldTimerRun = true;
   }
 
+  private void PauseTimer() {
+    shouldTimerRun = false;
+  }
 
+  private void ResumeTimer() {
+    shouldTimerRun = true;
+  }
 }
