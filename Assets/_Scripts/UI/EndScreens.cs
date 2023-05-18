@@ -8,6 +8,10 @@ public class EndScreens : MonoBehaviour {
 
 
   private void Start() {
+    EventManager.LevelLoaded += AddListeners;
+  }
+
+  private void AddListeners(LevelManager levelManager) {
     EventManager.LevelWon += DisplayWinScreen;
     EventManager.LevelLost += DisplayLoseScreen;
   }

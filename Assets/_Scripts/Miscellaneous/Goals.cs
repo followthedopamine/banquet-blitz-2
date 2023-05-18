@@ -21,9 +21,10 @@ public class Goals : MonoBehaviour {
     countCompleted = TrackCountCompletion(matches);
     EventManager.GoalUpdated(levelManager);
     if (scoreCompleted && countCompleted) {
-      EventManager.LevelWon();
+      levelManager.levelIsWon = true;
     }
   }
+
   // Returns true if score goal has been completed
   private bool TrackScoreCompletion(List<Match> matches) {
     LevelManager levelManager = GameManager.Instance.levelManager;

@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour {
       levelManager.timeRemaining = 0;
       shouldTimerRun = false;
       // TODO: Goal failed
-      EventManager.LevelLost();
+      levelManager.levelIsLost = true;
     }
   }
 

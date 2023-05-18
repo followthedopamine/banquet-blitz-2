@@ -11,7 +11,7 @@ public class Moves : MonoBehaviour {
     GameManager.Instance.levelManager.movesRemaining--;
     EventManager.MovesUpdated();
     if (GameManager.Instance.levelManager.movesRemaining == 0) {
-      EventManager.LevelLost();
+      GameManager.Instance.levelManager.levelIsLost = true;
     }
   }
 }
