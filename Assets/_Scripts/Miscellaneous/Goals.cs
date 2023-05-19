@@ -26,6 +26,11 @@ public class Goals : MonoBehaviour {
     EventManager.GoalUpdated(levelManager);
     if (scoreCompleted && countCompleted) {
       levelManager.levelIsWon = true;
+      Debug.Log("Level is won, waiting for game loop to finish");
+      Debug.Log("Goal completion: ");
+      foreach (int goal in levelManager.goalRemaining) {
+        Debug.Log(goal);
+      }
     }
   }
 
@@ -49,19 +54,21 @@ public class Goals : MonoBehaviour {
   private bool TrackCountCompletion(List<Match> matches) {
     LevelManager levelManager = GameManager.Instance.levelManager;
 
-    bool countCompleted = true;
     for (int i = 0; i < levelManager.goalTiles.Count; i++) {
+      int goalTileId = levelManager.goalTiles[i].id;
       if (levelManager.goalRemaining[i] == 0) continue;
       foreach (Match match in matches) {
-        if (match.tileId == levelManager.goalTiles[i].id) {
+        if (match.tileId == goalTileId) {
           levelManager.goalRemaining[i] -= match.tilePositions.Count;
           if (levelManager.goalRemaining[i] <= 0) {
             levelManager.goalRemaining[i] = 0;
-          } else {
-            countCompleted = false;
           }
         }
       }
+    }
+    bool countCompleted = true;
+    foreach (int goal in levelManager.goalRemaining) {
+      if (goal != 0) countCompleted = false;
     }
     return countCompleted;
   }

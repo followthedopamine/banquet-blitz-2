@@ -37,10 +37,9 @@ sprints:
 
 ## In Progress
 
-- [bug-player-can-win-without-fully-completing-goal](tasks/bug-player-can-win-without-fully-completing-goal.md)
-
 ## Done
 
+- [bug-player-can-win-without-fully-completing-goal](tasks/bug-player-can-win-without-fully-completing-goal.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 - [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
