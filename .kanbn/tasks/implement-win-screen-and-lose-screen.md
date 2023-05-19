@@ -1,6 +1,6 @@
 ---
 created: 2023-05-13T04:01:03.495Z
-updated: 2023-05-18T23:59:10.637Z
+updated: 2023-05-19T22:18:53.543Z
 assigned: ""
 progress: 0.9
 tags:
@@ -16,3 +16,4 @@ started: 2023-05-16T00:00:00.000Z
 - [x] Make it so you can only activate one
 - [x] Pause losing while game loop is running
 - [ ] Win screen trophy should change with score
+- [ ] Win screen fireworks for different trophies
