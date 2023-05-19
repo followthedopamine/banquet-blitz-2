@@ -18,4 +18,5 @@ public class Score : MonoBehaviour {
     GameManager.Instance.levelManager.score += destroyedTiles.Count * SCORE_MULTIPLIER;
     EventManager.ScoreUpdated();
   }
+
 }

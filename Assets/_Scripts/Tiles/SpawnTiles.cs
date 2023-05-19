@@ -35,7 +35,7 @@ public class SpawnTiles : MonoBehaviour {
         levelTilemap.SetTile(positionToSpawnTile, newTile);
       }
     }
-
+    Debug.Log(destroyedTiles.Count + " tiles were spawned");
     EventManager.SpawnedTiles(destroyedTiles);
   }
 
