@@ -37,11 +37,11 @@ sprints:
 
 ## In Progress
 
-- [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 
 ## Done
 
+- [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 - [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
 - [bug-remove-ability-to-switch-tiles-during-game-loop](tasks/bug-remove-ability-to-switch-tiles-during-game-loop.md)
 - [trophy-level-up-fireworks](tasks/trophy-level-up-fireworks.md)
