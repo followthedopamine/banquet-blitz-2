@@ -37,10 +37,11 @@ sprints:
 
 ## In Progress
 
-- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
+- [bug-player-can-win-without-fully-completing-goal](tasks/bug-player-can-win-without-fully-completing-goal.md)
 
 ## Done
 
+- [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
 - [bug-timer-does-not-pause-on-game-won](tasks/bug-timer-does-not-pause-on-game-won.md)
 - [bug-remove-ability-to-switch-tiles-during-game-loop](tasks/bug-remove-ability-to-switch-tiles-during-game-loop.md)
