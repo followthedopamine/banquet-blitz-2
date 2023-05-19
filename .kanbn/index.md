@@ -33,12 +33,12 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
-- [bug-tiles-can-be-switched-after-level-ends](tasks/bug-tiles-can-be-switched-after-level-ends.md)
 
 ## In Progress
 
 ## Done
 
+- [bug-tiles-can-be-switched-after-level-ends](tasks/bug-tiles-can-be-switched-after-level-ends.md)
 - [bug-player-can-win-without-fully-completing-goal](tasks/bug-player-can-win-without-fully-completing-goal.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
 - [bug-fix-score-only-working-sometimes](tasks/bug-fix-score-only-working-sometimes.md)
