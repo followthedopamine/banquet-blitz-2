@@ -37,6 +37,11 @@ public class TrophyLevelUp : MonoBehaviour {
   private void LevelUp() {
     PlayFireworksAnimation();
     ChangeSprite();
+    UpdateCurrentTrophyForLevel();
+  }
+
+  private void UpdateCurrentTrophyForLevel() {
+    GameManager.Instance.levelManager.currentTrophy++;
   }
 
   private void PlayFireworksAnimation() {

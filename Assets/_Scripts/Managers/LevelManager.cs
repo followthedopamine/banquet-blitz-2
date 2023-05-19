@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
   public bool levelIsWon = false;
   public bool levelIsLost = false;
   public bool gameLoopRunning = false;
+  public int currentTrophy = -1;
 
 
   private void OnEnable() {
