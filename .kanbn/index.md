@@ -13,8 +13,6 @@ sprints:
 
 ## Backlog
 
-- [power-ups](tasks/power-ups.md)
-- [obstacles](tasks/obstacles.md)
 - [music](tasks/music.md)
 - [sound-effects](tasks/sound-effects.md)
 - [title-screen-art](tasks/title-screen-art.md)
@@ -26,6 +24,7 @@ sprints:
 - [in-game-menu-art](tasks/in-game-menu-art.md)
 - [options-art](tasks/options-art.md)
 - [hide-next-level-button-if-there-is-no-next-level](tasks/hide-next-level-button-if-there-is-no-next-level.md)
+- [power-ups](tasks/power-ups.md)
 
 ## Todo
 
@@ -35,6 +34,8 @@ sprints:
 - [main-menu-buttons](tasks/main-menu-buttons.md)
 
 ## In Progress
+
+- [obstacles](tasks/obstacles.md)
 
 ## Done
 
