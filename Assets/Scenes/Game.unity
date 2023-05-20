@@ -142,6 +142,8 @@ GameObject:
   - component: {fileID: 250200861}
   - component: {fileID: 250200862}
   - component: {fileID: 250200863}
+  - component: {fileID: 250200865}
+  - component: {fileID: 250200864}
   m_Layer: 0
   m_Name: Tilemap Manager
   m_TagString: Untagged
@@ -282,6 +284,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d1cbcbd6771a748b89a9dc8ce7dc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileId: 0
+  isDamagedByNearDestroyedTile: 1
+  nextDamagedTileId: -1
+  tileFallsNormally: 1
+  isInCoverTilemap: 0
+--- !u!114 &250200864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250200851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfee4135f7c83b48871490d825b0ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileId: 0
+  isDamagedByNearDestroyedTile: 1
+  nextDamagedTileId: -1
+  tileFallsNormally: 1
+  isInCoverTilemap: 0
+--- !u!114 &250200865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250200851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63476a1280748848a45ffe2b9caa80f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileId: 0
