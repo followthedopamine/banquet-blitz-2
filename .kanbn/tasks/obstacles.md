@@ -1,12 +1,12 @@
 ---
 created: 2023-05-08T20:23:21.093Z
-updated: 2023-05-20T00:08:33.625Z
+updated: 2023-05-20T02:12:37.805Z
 assigned: ""
-progress: 0
+progress: 0.05
 tags:
   - Code
   - Art
-started: 2023-05-20T00:08:33.625Z
+started: 2023-05-20T00:00:00.000Z
 ---
 
 # Obstacles
@@ -14,7 +14,7 @@ started: 2023-05-20T00:08:33.625Z
 ## Sub-tasks
 
 - [ ] Make a list of all the obstacles we need
-- [ ] Create an obstacle scaffold of some kind
+- [x] Create an obstacle scaffold of some kind
 - [ ] Create all the obstacles
 - [ ] Boulder - Drops like a normal block and takes up to 3 matches near to remove
 - [ ] Jelly - Freezes a block underneath in place and matches near degrade and destroy it
