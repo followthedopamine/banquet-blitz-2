@@ -285,9 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileId: 0
-  isDamagedByNearDestroyedTile: 0
+  isDamagedByNearDestroyedTile: 1
   nextDamagedTileId: -1
-  tileFallsNormally: 0
+  tileFallsNormally: 1
   isInCoverTilemap: 0
 --- !u!1 &519420028
 GameObject:
@@ -521,6 +521,13 @@ MonoBehaviour:
   cam: {fileID: 0}
   levelManager: {fileID: 0}
   lives: 5
+  allGameTiles:
+  - {fileID: 11400000, guid: 881f3d266c5e42c418f9d3a7eb4e88f3, type: 2}
+  - {fileID: 11400000, guid: acf80027d5833974791223c341e7749f, type: 2}
+  - {fileID: 11400000, guid: 31fc5007c532cd446b2cf43ab66917ed, type: 2}
+  - {fileID: 11400000, guid: b4489ae1fe0fe9141abe1bc9dcff663b, type: 2}
+  - {fileID: 11400000, guid: c8a7d5559d12d6c49914c360f58a525e, type: 2}
+  - {fileID: 11400000, guid: ec2f0fcf43f65184c8ade539f598d95a, type: 2}
 --- !u!114 &947890260
 MonoBehaviour:
   m_ObjectHideFlags: 0

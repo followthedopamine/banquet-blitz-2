@@ -59,4 +59,13 @@ public class TilemapHelper : MonoBehaviour {
     }
     return tiles;
   }
+
+  public static List<Vector3Int> GetNeighbourTilePositions(Vector3Int tile) {
+    Vector3Int northTile = new(tile.x, tile.y + 1, tile.z);
+    Vector3Int southTile = new(tile.x, tile.y - 1, tile.z);
+    Vector3Int eastTile = new(tile.x + 1, tile.y, tile.z);
+    Vector3Int westTile = new(tile.x - 1, tile.y, tile.z);
+    List<Vector3Int> neighbourTilePositions = new() { northTile, southTile, eastTile, westTile };
+    return neighbourTilePositions;
+  }
 }

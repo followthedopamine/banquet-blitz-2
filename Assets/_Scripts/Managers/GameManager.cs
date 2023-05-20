@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager> {
   [HideInInspector] public LevelManager levelManager;
   public const int MAX_LIVES = 5;
   public int lives = 5;
+  public List<GameTile> allGameTiles;
 
   private void OnEnable() {
     cam = Camera.main;

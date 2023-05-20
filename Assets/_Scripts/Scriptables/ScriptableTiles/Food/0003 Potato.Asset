@@ -36,3 +36,4 @@ MonoBehaviour:
   m_ColliderType: 2
   id: 3
   type: 0
+  canBeSwitched: 1
