@@ -72,6 +72,9 @@ public class DragTiles : MonoBehaviour {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Vector3Int targetTilePosition = GetNearestTileInDraggedDirection();
     GameTile targetTile = levelTilemap.GetTile<GameTile>(targetTilePosition);
+    GameTile draggedTile = levelTilemap.GetTile<GameTile>(draggedTilePosition);
+    if (!targetTile.canBeSwitched) return;
+    if (!draggedTile.canBeSwitched) return;
     if (targetTilePosition == draggedTilePosition) return;
     if (!IsPositionInBounds(targetTilePosition)) return;
     levelTilemap.SetTile(targetTilePosition, draggedTile);

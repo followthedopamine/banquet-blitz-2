@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour {
   public bool levelIsLost = false;
   public bool gameLoopRunning = false;
   public int currentTrophy = -1;
+  public HashSet<int> tilesIdsThatCantBeSwitched;
+
 
 
   private void OnEnable() {
@@ -28,5 +30,9 @@ public class LevelManager : MonoBehaviour {
     containerTilePositions = TilemapHelper.GetTilePositions(containerTilemap);
     EventManager.LevelLoaded(this);
     Debug.Log("Level loaded");
+  }
+
+  public void AddTileToListOfTilesThatCantBeSwitched(int tileId) {
+    tilesIdsThatCantBeSwitched.Add(tileId);
   }
 }

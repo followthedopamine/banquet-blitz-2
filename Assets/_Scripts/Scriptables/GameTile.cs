@@ -9,9 +9,11 @@ using UnityEditor;
 public class GameTile : Tile {
   public enum Type {
     Food,
+    Obstacle,
   }
   public int id;
   public Type type;
+  public bool canBeSwitched = true;
 
 #if UNITY_EDITOR
   // The following is a helper that adds a menu item to create a RoadTile Asset
