@@ -21,7 +21,6 @@ public class LevelManager : MonoBehaviour {
   public bool levelIsLost = false;
   public bool gameLoopRunning = false;
   public int currentTrophy = -1;
-  public HashSet<int> tilesIdsThatCantBeSwitched;
 
 
 
@@ -32,9 +31,5 @@ public class LevelManager : MonoBehaviour {
     overlayTilemap = GameObject.Find("Overlay Tilemap").GetComponent<Tilemap>();
     EventManager.LevelLoaded(this);
     Debug.Log("Level loaded");
-  }
-
-  public void AddTileToListOfTilesThatCantBeSwitched(int tileId) {
-    tilesIdsThatCantBeSwitched.Add(tileId);
   }
 }
