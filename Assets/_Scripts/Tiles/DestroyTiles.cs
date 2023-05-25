@@ -22,6 +22,7 @@ public class DestroyTiles : MonoBehaviour {
     foreach (Match match in matches) {
       foreach (Vector3Int tilePosition in match.tilePositions) {
         DestroyTileAtPosition(tilePosition);
+        DestroyOverlayTileAtPosition(tilePosition);
         destroyedTiles.Add(tilePosition);
       }
     }
@@ -29,5 +30,12 @@ public class DestroyTiles : MonoBehaviour {
       Debug.Log("Tiles destroyed: " + destroyedTiles.Count);
       EventManager.DestroyedTiles(destroyedTiles);
     }
+  }
+
+  private void DestroyOverlayTileAtPosition(Vector3Int tilePosition) {
+    Tilemap overlayTilemap = GameManager.Instance.levelManager.overlayTilemap;
+    if (!overlayTilemap.HasTile(tilePosition)) return;
+    // Might need a check here in future if any overlay tiles aren't destroyed by a match underneath
+    overlayTilemap.SetTile(tilePosition, null);
   }
 }

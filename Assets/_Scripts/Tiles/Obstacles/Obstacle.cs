@@ -9,6 +9,9 @@ public abstract class Obstacle : MonoBehaviour {
   [HideInInspector] public int nextDamagedTileId = -1;
   [HideInInspector] public bool tileFallsNormally = true;
   [HideInInspector] public bool isInCoverTilemap = false;
+  [HideInInspector] public bool isDestroyedByUnderTileMatch = false;
+  [HideInInspector] public bool freezesUnderTile = false;
+
 
   private void OnEnable() {
     EventManager.DestroyedTiles += DamageTileByNearDestroyedTile;

@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class LevelManager : MonoBehaviour {
   [HideInInspector] public Tilemap levelTilemap;
   [HideInInspector] public Tilemap containerTilemap;
+  [HideInInspector] public Tilemap overlayTilemap;
   [HideInInspector] public List<Vector3Int> containerTilePositions;
   /*[HideInInspector]*/
   public int score;
@@ -28,6 +29,7 @@ public class LevelManager : MonoBehaviour {
     levelTilemap = GameObject.Find("Level Tilemap").GetComponent<Tilemap>();
     containerTilemap = GameObject.Find("Container Tilemap").GetComponent<Tilemap>();
     containerTilePositions = TilemapHelper.GetTilePositions(containerTilemap);
+    overlayTilemap = GameObject.Find("Overlay Tilemap").GetComponent<Tilemap>();
     EventManager.LevelLoaded(this);
     Debug.Log("Level loaded");
   }
