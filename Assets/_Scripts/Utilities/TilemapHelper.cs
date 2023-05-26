@@ -68,4 +68,16 @@ public class TilemapHelper : MonoBehaviour {
     List<Vector3Int> neighbourTilePositions = new() { northTile, southTile, eastTile, westTile };
     return neighbourTilePositions;
   }
+
+  public static List<Vector3Int> GetAllTilesOfId(Tilemap tilemap, int tileId) {
+    List<Vector3Int> allTiles = GetTilePositions(tilemap);
+    for (int i = 0; i < allTiles.Count; i++) {
+      Vector3Int tile = allTiles[i];
+      if (tilemap.GetTile<GameTile>(tile).id != tileId) {
+        allTiles.RemoveAt(i);
+        i--;
+      }
+    }
+    return allTiles;
+  }
 }

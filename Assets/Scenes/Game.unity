@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 250200863}
   - component: {fileID: 250200865}
   - component: {fileID: 250200864}
+  - component: {fileID: 250200867}
+  - component: {fileID: 250200866}
   m_Layer: 0
   m_Name: Tilemap Manager
   m_TagString: Untagged
@@ -290,7 +292,9 @@ MonoBehaviour:
   isDamagedByNearDestroyedTile: 1
   nextDamagedTileId: -1
   tileFallsNormally: 1
-  isInCoverTilemap: 0
+  isDestroyedByUnderTileMatch: 0
+  freezesUnderTile: 0
+  destroyTileInBottomRow: 0
 --- !u!114 &250200864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +311,9 @@ MonoBehaviour:
   isDamagedByNearDestroyedTile: 1
   nextDamagedTileId: -1
   tileFallsNormally: 1
-  isInCoverTilemap: 0
+  isDestroyedByUnderTileMatch: 0
+  freezesUnderTile: 0
+  destroyTileInBottomRow: 0
 --- !u!114 &250200865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +330,47 @@ MonoBehaviour:
   isDamagedByNearDestroyedTile: 1
   nextDamagedTileId: -1
   tileFallsNormally: 1
-  isInCoverTilemap: 0
+  isDestroyedByUnderTileMatch: 0
+  freezesUnderTile: 0
+  destroyTileInBottomRow: 0
+--- !u!114 &250200866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250200851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4147ee8321c39743815394f9101520b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileId: 0
+  isDamagedByNearDestroyedTile: 0
+  nextDamagedTileId: -1
+  tileFallsNormally: 1
+  isDestroyedByUnderTileMatch: 0
+  freezesUnderTile: 0
+  destroyTileInBottomRow: 0
+--- !u!114 &250200867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250200851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19099750161e41246a112403cbf970f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileId: 0
+  isDamagedByNearDestroyedTile: 0
+  nextDamagedTileId: -1
+  tileFallsNormally: 1
+  isDestroyedByUnderTileMatch: 0
+  freezesUnderTile: 0
+  destroyTileInBottomRow: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

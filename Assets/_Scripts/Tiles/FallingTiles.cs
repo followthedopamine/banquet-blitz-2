@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class FallingTiles : MonoBehaviour {
 
-  private const float FALL_SPEED = 5.5f;
+  public static float FALL_SPEED = 5.5f;
   private int tilesFalling = 0;
 
   private void OnEnable() {
