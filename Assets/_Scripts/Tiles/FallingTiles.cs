@@ -28,6 +28,13 @@ public class FallingTiles : MonoBehaviour {
       Vector3Int emptyTile = emptyTiles[0];
       Pair<Vector3Int, int> replacementTile = FindClosestTileWithPositiveYInList(emptyTile, remainingTiles);
       Pair<Vector3Int, Vector3Int> tilePair = new(emptyTile, replacementTile.First);
+
+      if (!ShouldTileFall(replacementTile.First)) {
+        remainingTiles.RemoveAt(replacementTile.Second);
+        // emptyTiles.RemoveAt(0);
+        continue;
+      }
+
       tilesThatNeedToFall.Add(tilePair);
       emptyTiles.RemoveAt(0);
       if (containerTilePositions.Contains(replacementTile.First)) {
@@ -37,6 +44,12 @@ public class FallingTiles : MonoBehaviour {
       remainingTiles.RemoveAt(replacementTile.Second);
     }
     MakeTilesFall(tilesThatNeedToFall);
+  }
+
+  private bool ShouldTileFall(Vector3Int tilePosition) {
+    // Might need additional checks here if any overlay tiles don't freeze tile underneath
+    Tilemap overlayTilemap = GameManager.Instance.levelManager.overlayTilemap;
+    return overlayTilemap.GetTile(tilePosition) == null;
   }
 
   private List<Vector3Int> SortTilePositionsByYValue(List<Vector3Int> tilePositions) {
@@ -58,6 +71,11 @@ public class FallingTiles : MonoBehaviour {
 
     Pair<Vector3Int, int> result = new(tileList[closestPositiveYIndex], closestPositiveYIndex);
     return result;
+  }
+
+  private bool IsTileAboveFrozen(Vector3Int tilePosition) {
+    Vector3Int tileAbove = new(tilePosition.x, tilePosition.y + 1, tilePosition.z);
+    return !ShouldTileFall(tileAbove);
   }
 
   private void MakeTilesFall(List<Pair<Vector3Int, Vector3Int>> tilesThatNeedToFall) {
