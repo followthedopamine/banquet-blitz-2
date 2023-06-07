@@ -33,6 +33,7 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
 - [animation-for-destroyed-tiles](tasks/animation-for-destroyed-tiles.md)
+- [bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse](tasks/bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse.md)
 
 ## In Progress
 
