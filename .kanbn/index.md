@@ -31,13 +31,13 @@ sprints:
 
 - [fix-grid-image-being-too-large](tasks/fix-grid-image-being-too-large.md)
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
-- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
 - [animation-for-destroyed-tiles](tasks/animation-for-destroyed-tiles.md)
 
 ## In Progress
 
 - [obstacles](tasks/obstacles.md)
+- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 
 ## Done
 
