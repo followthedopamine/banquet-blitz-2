@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class TilemapHelper : MonoBehaviour {
+  public enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+  }
+
   public static GameObject ReplaceTileWithGameObject(Tilemap tilemap, Vector3Int tilePosition, bool useMask = false) {
     Vector3 worldPosition = tilemap.GetCellCenterWorld(tilePosition);
     Tile tile = tilemap.GetTile<Tile>(tilePosition);
@@ -79,5 +86,29 @@ public class TilemapHelper : MonoBehaviour {
       }
     }
     return allTiles;
+  }
+
+  public static float GetTileSize(Tilemap tilemap) {
+    foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin) {
+      if (tilemap.HasTile(position)) {
+        Vector3Int positionToRight = new(position.x + 1, position.y, position.z);
+        if (!tilemap.HasTile(positionToRight)) continue;
+        return tilemap.GetCellCenterWorld(positionToRight).x - tilemap.GetCellCenterWorld(position).x;
+      }
+    }
+    return -1f; // If there are no tiles in tilemap return -1
+  }
+
+  public static Direction GetDirectionOfTile(Vector3Int fromPosition, Vector3Int toPosition) {
+    // Might also need to depend on the dimensions of the tilemap for truly great usability
+    int x = fromPosition.x - toPosition.x;
+    int y = fromPosition.y - toPosition.y;
+    int xDepth = Mathf.Abs(x);
+    int yDepth = Mathf.Abs(y);
+    if (xDepth >= yDepth) {
+      return x >= 0 ? Direction.Left : Direction.Right;
+    } else {
+      return y <= 0 ? Direction.Up : Direction.Down;
+    }
   }
 }

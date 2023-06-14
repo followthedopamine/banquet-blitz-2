@@ -8,6 +8,7 @@ public class DragTiles : MonoBehaviour {
 
   private GameTile draggedTile;
   private Vector3Int draggedTilePosition;
+  private static Vector3Int FAKE_TILE_POSITION = new(-999, -999, -999);
 
   private void OnEnable() {
     EventManager.TilemapMouseDown += PrintClickedTile;
@@ -28,6 +29,7 @@ public class DragTiles : MonoBehaviour {
   private Vector3Int GetTilePositionUnderMouse() {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Vector3 mousePositionInWorld = GameManager.Instance.cam.ScreenToWorldPoint(Input.mousePosition);
+    if (!levelTilemap.HasTile(levelTilemap.WorldToCell(mousePositionInWorld))) return FAKE_TILE_POSITION;
     return levelTilemap.WorldToCell(mousePositionInWorld);
   }
 
@@ -69,6 +71,7 @@ public class DragTiles : MonoBehaviour {
   private void SwitchTiles() {
     if (GameManager.Instance.levelManager.gameLoopRunning) return;
     if (GameManager.Instance.levelManager.levelIsWon || GameManager.Instance.levelManager.levelIsLost) return;
+    if (draggedTilePosition == FAKE_TILE_POSITION) return;
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Vector3Int targetTilePosition = GetNearestTileInDraggedDirection();
     GameTile targetTile = levelTilemap.GetTile<GameTile>(targetTilePosition);

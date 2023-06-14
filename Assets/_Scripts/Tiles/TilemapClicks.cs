@@ -11,4 +11,13 @@ public class TilemapClicks : MonoBehaviour {
   private void OnMouseUp() {
     EventManager.TilemapMouseUp();
   }
+
+  // private void Update() {
+  //   if (Input.GetMouseButtonDown(0)) {
+  //     EventManager.TilemapMouseDown();
+  //   }
+  //   if (Input.GetMouseButtonUp(0)) {
+  //     EventManager.TilemapMouseUp();
+  //   }
+  // }
 }

@@ -32,9 +32,47 @@ public class TileSwitchIndicator : MonoBehaviour {
     PositionTileSwitchIndicator();
   }
 
+  private float GetHalfTileSize() {
+    Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
+    float tileSize = TilemapHelper.GetTileSize(levelTilemap);
+    Debug.Log(tileSize);
+    return tileSize / 2;
+  }
+
   private void PositionTileSwitchIndicator() {
-    Vector3Int? hoveredTilePosition = GetTilePositionUnderMouse();
-    if (hoveredTilePosition == draggedTilePosition) indicatorSpriteRenderer.sprite = cancelSwitchSprite;
+    Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
+    Vector3Int hoveredTilePosition = GetTilePositionUnderMouse();
+    float halfTileSize = GetHalfTileSize(); // TODO: This should be moved to level load event and stored globally
+    Vector3 worldPosition = levelTilemap.GetCellCenterWorld(draggedTilePosition);
+
+    if (hoveredTilePosition == draggedTilePosition || hoveredTilePosition == FAKE_TILE_POSITION) {
+      indicatorSpriteRenderer.sprite = cancelSwitchSprite;
+      indicator.transform.position = new(worldPosition.x, worldPosition.y, worldPosition.z);
+      return;
+    }
+
+    indicatorSpriteRenderer.sprite = tileSwitchSprite;
+
+    TilemapHelper.Direction draggedDirection = TilemapHelper.GetDirectionOfTile(draggedTilePosition, hoveredTilePosition);
+
+    switch (draggedDirection) {
+      case TilemapHelper.Direction.Up:
+        indicator.transform.localRotation = Quaternion.Euler(0, 0, 90);
+        indicator.transform.position = new(worldPosition.x, worldPosition.y + halfTileSize, worldPosition.z);
+        break;
+      case TilemapHelper.Direction.Down:
+        indicator.transform.localRotation = Quaternion.Euler(0, 0, 90);
+        indicator.transform.position = new(worldPosition.x, worldPosition.y - halfTileSize, worldPosition.z);
+        break;
+      case TilemapHelper.Direction.Left:
+        indicator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        indicator.transform.position = new(worldPosition.x - halfTileSize, worldPosition.y, worldPosition.z);
+        break;
+      case TilemapHelper.Direction.Right:
+        indicator.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        indicator.transform.position = new(worldPosition.x + halfTileSize, worldPosition.y, worldPosition.z);
+        break;
+    }
   }
 
   private void ShowTileSwitchIndicator() {
@@ -57,6 +95,7 @@ public class TileSwitchIndicator : MonoBehaviour {
   private Vector3Int GetTilePositionUnderMouse() {
     Tilemap levelTilemap = GameManager.Instance.levelManager.levelTilemap;
     Vector3 mousePositionInWorld = GameManager.Instance.cam.ScreenToWorldPoint(Input.mousePosition);
+    if (!levelTilemap.HasTile(levelTilemap.WorldToCell(mousePositionInWorld))) return FAKE_TILE_POSITION;
     return levelTilemap.WorldToCell(mousePositionInWorld);
   }
 }
