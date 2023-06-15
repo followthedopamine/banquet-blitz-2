@@ -26,6 +26,7 @@ sprints:
 - [hide-next-level-button-if-there-is-no-next-level](tasks/hide-next-level-button-if-there-is-no-next-level.md)
 - [power-ups](tasks/power-ups.md)
 - [tiles-fall-in-from-sides-under-a-frozen-block](tasks/tiles-fall-in-from-sides-under-a-frozen-block.md)
+- [level-select](tasks/level-select.md)
 
 ## Todo
 
