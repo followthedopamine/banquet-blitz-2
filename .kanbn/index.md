@@ -33,15 +33,14 @@ sprints:
 - [hide-timer-or-moves-if-not-applicable](tasks/hide-timer-or-moves-if-not-applicable.md)
 - [main-menu-buttons](tasks/main-menu-buttons.md)
 - [animation-for-destroyed-tiles](tasks/animation-for-destroyed-tiles.md)
-- [bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse](tasks/bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse.md)
 
 ## In Progress
 
 - [obstacles](tasks/obstacles.md)
-- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 
 ## Done
 
+- [tile-switch-indicator](tasks/tile-switch-indicator.md)
 - [bug-tiles-can-be-switched-after-level-ends](tasks/bug-tiles-can-be-switched-after-level-ends.md)
 - [bug-player-can-win-without-fully-completing-goal](tasks/bug-player-can-win-without-fully-completing-goal.md)
 - [implement-win-screen-and-lose-screen](tasks/implement-win-screen-and-lose-screen.md)
@@ -61,3 +60,4 @@ sprints:
 - [tutorial-art](tasks/tutorial-art.md)
 - [slice-win-and-lose-screen-art](tasks/slice-win-and-lose-screen-art.md)
 - [win-screen-art](tasks/win-screen-art.md)
+- [bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse](tasks/bug-where-hovering-one-tile-while-dragging-and-then-switching-to-another-can-switch-without-releasing-mouse.md)
